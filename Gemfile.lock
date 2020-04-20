@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    reins (0.2.0)
+      erubis
+      multi_json
+      rack
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    erubis (2.7.0)
+    multi_json (1.14.1)
+    rack (2.2.2)
+    rake (12.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake (~> 12.0)
+  reins!
+
+BUNDLED WITH
+   2.1.4

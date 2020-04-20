@@ -5,10 +5,12 @@ module Reins
     def get_controller_and_action(env)
       before, controller, action, after = env['PATH_INFO'].split('/', 4)
 
-      controller = controller.capitalize # People
-      controller += 'Controller' # PeopleController
+      controller_prefix = controller.capitalize # People
+      controller_name = "#{controller_prefix}Controller" # PeopleController
 
-      [Object.const_get(controller), action]
+      controller_class = Object.const_get(controller_name)
+
+      [controller_class, action]
     end
   end
 end
